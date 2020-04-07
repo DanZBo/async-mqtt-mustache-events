@@ -1,0 +1,25 @@
+{
+  "name": "async-mqtt-mustache-events",
+  "version": "1.0.0",
+  "description": "Event wrapper over async-mqtt",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanZBo/async-mqtt-mustache-events.git"
+  },
+  "author": "DanZBo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanZBo/async-mqtt-mustache-events/issues"
+  },
+  "homepage": "https://github.com/DanZBo/async-mqtt-mustache-events#readme",
+  "dependencies": {
+    "async-mqtt": "^2.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  }
+}
