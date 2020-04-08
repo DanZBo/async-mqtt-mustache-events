@@ -17,9 +17,11 @@ a style like mustache template style. (more information in examples)
 //subscriber
 .subscribe(`temperature/{room}`, 'temperatureFromHome');
 //listener
-.on('temperatureFromHome', (props)=>{
+.on('temperatureFromHome', (props, msg)=>{
     console.log(props);
     //{room: 'WS'}
+    console.log(msg)
+    // '23°C'
 });
 
 //tool subscribe on "temperature/+" topic in mqtt
