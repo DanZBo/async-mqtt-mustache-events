@@ -1,6 +1,6 @@
 {
   "name": "async-mqtt-mustache-events",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Event wrapper over async-mqtt",
   "main": "index.js",
   "scripts": {
