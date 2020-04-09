@@ -1,5 +1,11 @@
 # async-mqtt-mustache-events
 
+## Installation
+
+```
+$ npm install async-mqtt-mustache-events
+```
+
 ## Description
 `async-mqtt-mustache-events` is a wrapper over async-mqtt and it resolves two issues:
 ```
