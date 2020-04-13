@@ -18,12 +18,17 @@ a style like mustache template style. (more information in examples)
 ```
 
 ## Examples
+### Include
+```javascript
+const MQTT = require("async-mqtt-mustache-events");
+const client = MQTT.connect("tcp://somehost.com:1883"); 
+```
 ### .subscribe(topic, event_name)
 ```javascript
 //subscriber
-.subscribe(`temperature/{room}`, 'temperatureFromHome');
+client.subscribe(`temperature/{room}`, 'temperatureFromHome');
 //listener
-.on('temperatureFromHome', (props, msg)=>{
+client.on('temperatureFromHome', (props, msg)=>{
     console.log(props);
     //{room: 'WS'}
     console.log(msg)
@@ -35,10 +40,10 @@ a style like mustache template style. (more information in examples)
 
 ### .unsubscribe(event_name)
 ```javascript
-.unsubscribe('temperatureFromHome')
+client.unsubscribe('temperatureFromHome')
 ```
 
 ### .publish(topic, message)
 ```javascript
-.publish('temperature/WS', '23°C')
+client.publish('temperature/WS', '23°C')
 ```
