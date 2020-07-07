@@ -10,8 +10,8 @@ class MustacheMQTT extends EventEmitter {
         this._client.on('message', this._handleMessage.bind(this));
     }
 
-    async publish(topic, msg) {
-        return this._client.publish(topic, msg);
+    async publish(...args) {
+        return this._client.publish(...args);
     }
 
     async subscribe(topic, eventName) {
