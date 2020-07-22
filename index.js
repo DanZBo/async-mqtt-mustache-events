@@ -41,7 +41,7 @@ class MustacheMQTT extends EventEmitter {
                 for (key in value.props) {
                     props[key] = splitedTopic[value.props[key]]
                 }
-                this.emit(value.eventName, props, msg)
+                this.emit(value.eventName, props, msg, value.eventName)
                 break
             }
         }
