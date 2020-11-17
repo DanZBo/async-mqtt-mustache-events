@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/DanZBo/async-mqtt-mustache-events#readme",
   "dependencies": {
-    "async-mqtt": "^2.5.0"
+    "async-mqtt": "^2.6.1"
   },
   "devDependencies": {
     "mocha": "^7.1.1"
