@@ -50,7 +50,7 @@ class MustacheMQTT extends EventEmitter {
 
     async _createRegExp(topic) {
         return new RegExp(`^${topic
-            .replace(/({\w+})/g, `(.+)`)}$`)
+            .replace(/({\w+})/g, `(.+)`)}$`,'g')
     }
 
     async _replaceTopic(topic) {
