@@ -1,5 +1,5 @@
-const assert = require('assert');
-const MustacheMQTT = require('./index');
+import assert from 'assert';
+import { connect } from './index.mjs';
 
 const MQTT_SERVER_PORT = 1883;
 const MQTT_SERVER_URL = `mqtt://localhost:${MQTT_SERVER_PORT}`
@@ -10,7 +10,7 @@ const EVENT_NAME = 'test';
 const TEST_MESSAGE = `It's test message`
 
 describe('Connection', () => {
-    var mustacheMQTTClient = MustacheMQTT.connect(MQTT_SERVER_URL)
+    var mustacheMQTTClient = connect(MQTT_SERVER_URL)
 
 
     describe('#subscibe()', function () {

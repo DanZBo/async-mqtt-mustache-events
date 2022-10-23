@@ -1,5 +1,5 @@
-const MQTT = require('async-mqtt');
-const EventEmitter = require('events');
+import { connect as _connect } from 'async-mqtt';
+import EventEmitter from 'events';
 
 class MustacheMQTT extends EventEmitter {
     constructor(client) {
@@ -74,11 +74,9 @@ class MustacheMQTT extends EventEmitter {
 }
 
 
-module.exports = {
-    connect(brokerURL, opts) {
-        const mqttClient = MQTT.connect(brokerURL, opts);
-        const mustacheMQTTClient = new MustacheMQTT(mqttClient)
+export function connect(brokerURL, opts) {
+    const mqttClient = _connect(brokerURL, opts);
+    const mustacheMQTTClient = new MustacheMQTT(mqttClient);
 
-        return mustacheMQTTClient;
-    }
-};
+    return mustacheMQTTClient;
+}
